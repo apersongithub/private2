@@ -1,4 +1,4 @@
-/*! For license information please see app-14a5a0a9.js.LICENSE.txt */
+/*! For license information please see app-d4c507a1.js.LICENSE.txt */
 (self.webpackChunk = self.webpackChunk || []).push([[2143], {
     90028: (e, t, a) => {
         "use strict";
@@ -253,7 +253,7 @@
             Z: () => s
         });
         const s = (0,
-        a(1398).ZP)(( () => Promise.all([a.e(7053), a.e(5314), a.e(5410), a.e(4265), a.e(938), a.e(6864)]).then(a.bind(a, 65047)).then((e => ({
+        a(1398).ZP)(( () => Promise.all([a.e(7053), a.e(5314), a.e(5410), a.e(4265), a.e(9469), a.e(4649)]).then(a.bind(a, 65047)).then((e => ({
             default: e.LottieAnimation
         })))))
     }
@@ -5428,13 +5428,14 @@
         "use strict";
         a.d(t, {
             $4: () => V,
-            Al: () => ve,
+            Al: () => fe,
             B8: () => G,
             Bk: () => z,
             Ch: () => T,
             Cm: () => ae,
+            EC: () => ue,
             EQ: () => u,
-            F$: () => me,
+            F$: () => he,
             Fp: () => Z,
             Jw: () => A,
             Lm: () => j,
@@ -5444,11 +5445,11 @@
             NR: () => re,
             NT: () => Q,
             Oz: () => H,
-            Rg: () => _e,
+            Rg: () => ve,
             Rv: () => d,
             S1: () => ce,
             SJ: () => h,
-            Sf: () => ge,
+            Sf: () => pe,
             Sg: () => g,
             Xr: () => S,
             Y2: () => ne,
@@ -5459,7 +5460,7 @@
             aQ: () => X,
             bE: () => f,
             bR: () => i,
-            c1: () => pe,
+            c1: () => me,
             cQ: () => D,
             dE: () => c,
             dY: () => ee,
@@ -5478,8 +5479,8 @@
             jv: () => r,
             lA: () => C,
             mk: () => p,
-            nI: () => ue,
-            nW: () => he,
+            nI: () => ge,
+            nW: () => _e,
             np: () => O,
             oe: () => L,
             r8: () => J,
@@ -5590,22 +5591,23 @@
           , le = e => !!e.stories.storySession || !!e.player.session
           , ce = s.P1(D, (e => e.streakSocietyRewardClaimed))
           , de = s.P1(D, (e => e.streakSocietyInductionSlideShownTime))
-          , ue = s.P1(y, (e => {
+          , ue = s.P1(D, (e => !!e.scoreLinkedInBannerDismissed))
+          , ge = s.P1(y, (e => {
             var t, a, s, n;
             return (null !== (a = null === (t = e.inventory.streak_freeze) || void 0 === t ? void 0 : t.quantity) && void 0 !== a ? a : 0) + (null !== (n = null === (s = e.inventory.society_streak_freeze) || void 0 === s ? void 0 : s.quantity) && void 0 !== n ? n : 0)
         }
         ))
-          , ge = s.P1(n, (e => e.builderConfig))
-          , pe = (s.P1(n, (e => {
+          , pe = s.P1(n, (e => e.builderConfig))
+          , me = (s.P1(n, (e => {
             var t;
             return null === (t = e.builderConfig) || void 0 === t ? void 0 : t.riveFileUrl
         }
         )),
         s.P1(n, (e => e.builtAvatar)))
-          , me = s.P1(n, (e => e.canShowAvatarsIntro))
-          , he = s.P1(A, (e => e.swrlEngagement))
-          , _e = s.P1(A, (e => e.storyModeSWRLEngagement))
-          , ve = s.P1((e => e.streakEarnback), (e => e.earnbackMultiSessionStats))
+          , he = s.P1(n, (e => e.canShowAvatarsIntro))
+          , _e = s.P1(A, (e => e.swrlEngagement))
+          , ve = s.P1(A, (e => e.storyModeSWRLEngagement))
+          , fe = s.P1((e => e.streakEarnback), (e => e.earnbackMultiSessionStats))
     }
     ,
     46355: (e, t, a) => {
@@ -8441,6 +8443,11 @@
                         updateRequest: null,
                         updateResult: t.result
                     };
+                case "SET_LINKED_IN_OAUTH_STATE":
+                    return {
+                        ...e,
+                        linkedinOAuthState: t.linkedinOAuthState
+                    };
                 default:
                     return e
                 }
@@ -9022,6 +9029,12 @@
                         _.t8)(e, "reportedProfileUserIds", [t.profileUserId, ...a.slice(0, 32)]);
                         break
                     }
+                case "SCORE_LINKEDIN_BANNER_DISMISSED":
+                    e = (0,
+                    _.t8)(e, "scoreLinkedInBannerDismissed", {
+                        timestamp: t.timestamp
+                    });
+                    break;
                 case "SESSION_END_PLUS_AD_SHOWN":
                     e = (0,
                     _.t8)(e, "sessionEndPlusAdShown", {
@@ -9537,10 +9550,10 @@
     73555: (e, t, a) => {
         "use strict";
         a.d(t, {
-            xq: () => Kr,
-            vH: () => Cr,
+            xq: () => Yr,
+            vH: () => Rr,
             HL: () => Gs,
-            dr: () => Tr
+            dr: () => Cr
         });
         var s = a(27378)
           , n = a(14935)
@@ -13738,7 +13751,7 @@
                 return "en" === o && "en" === t ? {
                     ...e,
                     numLearners: 479e4,
-                    numLearnersString: `${4.79.toPrecision(3)}M`
+                    numLearnersString: `${4.79 .toPrecision(3)}M`
                 } : e
             }
             ))
@@ -14049,9 +14062,9 @@
             var n
         }
           , Bs = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(5931), a.e(2209), a.e(7204), a.e(5314), a.e(5410), a.e(4265), a.e(938), a.e(7495), a.e(973), a.e(4048), a.e(5644), a.e(6056), a.e(8238), a.e(5747), a.e(1282), a.e(9122)]).then(a.bind(a, 82264))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(5931), a.e(7204), a.e(5314), a.e(5410), a.e(4265), a.e(9469), a.e(7495), a.e(973), a.e(4048), a.e(5644), a.e(6056), a.e(8238), a.e(5747), a.e(2252)]).then(a.bind(a, 94796))))
           , js = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2209), a.e(7581), a.e(5314), a.e(5410), a.e(5148), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7981), a.e(9031), a.e(2100), a.e(8238), a.e(7208), a.e(7507)]).then(a.bind(a, 4293))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(5314), a.e(2298), a.e(5410), a.e(5425), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7122), a.e(7981), a.e(9031), a.e(5197), a.e(8238), a.e(5380), a.e(7507)]).then(a.bind(a, 4293))))
           , $s = (0,
         Qe.ZP)(( () => a.e(1436).then(a.bind(a, 61436))))
           , Zs = (0,
@@ -14061,25 +14074,25 @@
           , qs = (0,
         Qe.ZP)(( () => a.e(8319).then(a.bind(a, 28319))))
           , Qs = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(2209), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(4226)]).then(a.bind(a, 80306))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(2298), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(6813)]).then(a.bind(a, 80306))))
           , Ks = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(2209), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(2498)]).then(a.bind(a, 98968))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(2298), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(7062)]).then(a.bind(a, 98968))))
           , Ys = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(8704), a.e(8956), a.e(7424)]).then(a.bind(a, 2072))))
           , Js = (0,
         Qe.ZP)(( () => Promise.all([a.e(7581), a.e(7198), a.e(7660)]).then(a.bind(a, 90587))))
           , Xs = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(4048), a.e(5739)]).then(a.bind(a, 97457))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(4048), a.e(2059), a.e(5573)]).then(a.bind(a, 97457))))
           , en = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2209), a.e(7581), a.e(5314), a.e(5410), a.e(5148), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7981), a.e(9031), a.e(2100), a.e(8238), a.e(7208), a.e(7507)]).then(a.bind(a, 941))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(5314), a.e(2298), a.e(5410), a.e(5425), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7122), a.e(7981), a.e(9031), a.e(5197), a.e(8238), a.e(5380), a.e(7507)]).then(a.bind(a, 941))))
           , tn = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2209), a.e(7581), a.e(5314), a.e(5410), a.e(5148), a.e(407), a.e(7493), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7981), a.e(9031), a.e(2100), a.e(8238), a.e(7208), a.e(3860), a.e(1012), a.e(8184), a.e(5993)]).then(a.bind(a, 45993))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(5314), a.e(2298), a.e(5410), a.e(5425), a.e(407), a.e(7493), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7122), a.e(7981), a.e(9031), a.e(5197), a.e(8238), a.e(5380), a.e(3860), a.e(1012), a.e(8184), a.e(5993)]).then(a.bind(a, 45993))))
           , an = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2209), a.e(7581), a.e(5314), a.e(5410), a.e(5148), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7981), a.e(9031), a.e(2100), a.e(8238), a.e(7208), a.e(7507)]).then(a.bind(a, 65637))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(5314), a.e(2298), a.e(5410), a.e(5425), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7122), a.e(7981), a.e(9031), a.e(5197), a.e(8238), a.e(5380), a.e(7507)]).then(a.bind(a, 65637))))
           , sn = (0,
         Qe.ZP)(( () => a.e(9199).then(a.bind(a, 69199))))
           , nn = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2209), a.e(7581), a.e(5314), a.e(5410), a.e(5148), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7981), a.e(9031), a.e(2100), a.e(8238), a.e(7208), a.e(7507)]).then(a.bind(a, 50565))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(5314), a.e(2298), a.e(5410), a.e(5425), a.e(4249), a.e(12), a.e(4048), a.e(6628), a.e(2980), a.e(2039), a.e(5644), a.e(7122), a.e(7981), a.e(9031), a.e(5197), a.e(8238), a.e(5380), a.e(7507)]).then(a.bind(a, 50565))))
           , rn = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(8704), a.e(8956), a.e(7220)]).then(a.bind(a, 51057))))
           , on = (0,
@@ -14093,7 +14106,7 @@
           , un = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(4249), a.e(973), a.e(8704), a.e(8914)]).then(a.bind(a, 3307))))
           , gn = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5314), a.e(5410), a.e(9119), a.e(5179)]).then(a.bind(a, 72384))))
+        Qe.ZP)(( () => Promise.all([a.e(5314), a.e(5410), a.e(2209), a.e(5179)]).then(a.bind(a, 72384))))
           , pn = (0,
         Qe.ZP)(( () => a.e(6292).then(a.bind(a, 66292))))
           , mn = (0,
@@ -14151,7 +14164,7 @@
           , Gn = (0,
         Qe.ZP)(( () => a.e(2023).then(a.bind(a, 82023))))
           , Vn = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(7581), a.e(2988), a.e(4249), a.e(973), a.e(8704), a.e(6056), a.e(7926), a.e(9279)]).then(a.bind(a, 5411))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7581), a.e(7204), a.e(2988), a.e(4249), a.e(973), a.e(8704), a.e(6056), a.e(7926), a.e(9458)]).then(a.bind(a, 5411))))
           , zn = (0,
         Qe.ZP)(( () => Promise.all([a.e(6056), a.e(3014)]).then(a.bind(a, 91380))))
           , Bn = (0,
@@ -14169,15 +14182,15 @@
           , Qn = (0,
         Qe.ZP)(( () => Promise.all([a.e(6056), a.e(7174)]).then(a.bind(a, 15390))))
           , Kn = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(9712), a.e(4048), a.e(6056), a.e(1282), a.e(411)]).then(a.bind(a, 19999))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(7581), a.e(1116), a.e(4048), a.e(6056), a.e(2059), a.e(411)]).then(a.bind(a, 19999))))
           , Yn = (0,
         Qe.ZP)(( () => a.e(7606).then(a.bind(a, 67606))))
           , Jn = (0,
-        Qe.ZP)(( () => Promise.all([a.e(2209), a.e(7581), a.e(5314), a.e(5410), a.e(407), a.e(7493), a.e(4249), a.e(6628), a.e(2039), a.e(5644), a.e(7981), a.e(9031), a.e(2100), a.e(3860), a.e(1012), a.e(8184), a.e(7758)]).then(a.bind(a, 60202))))
+        Qe.ZP)(( () => Promise.all([a.e(7581), a.e(5314), a.e(2298), a.e(5410), a.e(407), a.e(7493), a.e(4249), a.e(6628), a.e(2039), a.e(5644), a.e(7122), a.e(7981), a.e(9031), a.e(5197), a.e(3860), a.e(1012), a.e(8184), a.e(6586)]).then(a.bind(a, 60202))))
           , Xn = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(8704), a.e(8956), a.e(5956)]).then(a.bind(a, 96613))))
           , er = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(2209), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(6504)]).then(a.bind(a, 76400))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(2298), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(3477)]).then(a.bind(a, 76400))))
           , tr = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(8704), a.e(8956), a.e(9062)]).then(a.bind(a, 44545))))
           , ar = (0,
@@ -14197,9 +14210,9 @@
           , cr = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(4249), a.e(973), a.e(8704), a.e(6056), a.e(7926), a.e(871)]).then(a.bind(a, 90874))))
           , dr = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(2209), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(8833)]).then(a.bind(a, 96286))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(2298), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(8833)]).then(a.bind(a, 96286))))
           , ur = (0,
-        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(2209), a.e(7204), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(8833)]).then(a.bind(a, 10443))))
+        Qe.ZP)(( () => Promise.all([a.e(7053), a.e(7204), a.e(2298), a.e(4249), a.e(12), a.e(973), a.e(6628), a.e(8704), a.e(2980), a.e(8956), a.e(8833)]).then(a.bind(a, 10443))))
           , gr = (0,
         Qe.ZP)(( () => a.e(8332).then(a.bind(a, 71471))))
           , pr = (0,
@@ -14207,19 +14220,21 @@
           , mr = (0,
         Qe.ZP)(( () => a.e(5506).then(a.bind(a, 75506))))
           , hr = (0,
-        Qe.ZP)(( () => a.e(414).then(a.bind(a, 44234))))
-          , _r = e => {
+        Qe.ZP)(( () => Promise.all([a.e(7122), a.e(3648)]).then(a.bind(a, 44234))))
+          , _r = (0,
+        Qe.ZP)(( () => a.e(7311).then(a.bind(a, 27311))))
+          , vr = e => {
             const t = ({children: t}) => s.createElement(lr, {
                 feature: e
             }, t);
             return t.displayName = `UnavailableInZombieMode feature="${e}"`,
             t
         }
-          , vr = e => e.flatMap((e => {
+          , fr = e => e.flatMap((e => {
             if (void 0 === e.subroutes)
                 return e;
             const {components: t=[], path: a="", props: s={}} = e;
-            return vr(e.subroutes).map(( ({components: e=[], path: n="", props: r={}}) => ({
+            return fr(e.subroutes).map(( ({components: e=[], path: n="", props: r={}}) => ({
                 components: [...t, ...e],
                 path: `${a}${n}`,
                 props: {
@@ -14229,24 +14244,24 @@
             })))
         }
         ))
-          , fr = !0
           , Sr = !0
-          , yr = {
-            noMobileTabbar: fr,
-            noMobileTopbar: Sr
-        }
+          , yr = !0
           , Er = {
-            noDesktopTopbar: !0,
-            noMobileTabbar: fr,
-            noMobileTopbar: Sr
+            noMobileTabbar: Sr,
+            noMobileTopbar: yr
         }
           , br = {
+            noDesktopTopbar: !0,
+            noMobileTabbar: Sr,
+            noMobileTopbar: yr
+        }
+          , Ir = {
             noContainer: !0,
             noDesktopTopbar: !0,
-            noMobileTabbar: fr,
-            noMobileTopbar: Sr
+            noMobileTabbar: Sr,
+            noMobileTopbar: yr
         }
-          , Ir = ({appProps: e, components: t, path: a}) => {
+          , wr = ({appProps: e, components: t, path: a}) => {
             const r = s.useMemo(( () => {
                 const e = [Bs, ...t].filter(Qe.NL).filter((e => !e.hasLoaded()));
                 return 0 === e.length ? void 0 : Promise.all(e.map((e => e.preload())))
@@ -14277,215 +14292,215 @@
                 match: u
             }, e)), null))
         }
-          , wr = (0,
+          , kr = (0,
         Qe.ZP)(( () => Promise.all([a.e(7053), a.e(4265), a.e(5183), a.e(2712)]).then(a.bind(a, 58345))))
-          , kr = "/business/admin"
-          , Tr = e => `${kr}/${e}`
-          , Cr = Tr("learners")
-          , Rr = [s.createElement(n.AW, {
+          , Tr = "/business/admin"
+          , Cr = e => `${Tr}/${e}`
+          , Rr = Cr("learners")
+          , Lr = [s.createElement(n.AW, {
             element: s.createElement(Gs, {
-                to: Cr
+                to: Rr
             }),
             key: "route",
-            path: kr
+            path: Tr
         }), s.createElement(n.AW, {
-            element: s.createElement(wr, null),
+            element: s.createElement(kr, null),
             key: "route",
-            path: `${kr}/:page`
+            path: `${Tr}/:page`
         })]
-          , Lr = ({target: e}) => (s.useLayoutEffect(( () => {
+          , Pr = ({target: e}) => (s.useLayoutEffect(( () => {
             (0,
             P.Zs)(e, !0)
         }
         ), []),
         null)
-          , Pr = [s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+          , Ar = [s.createElement(n.AW, {
+            element: s.createElement(Pr, {
                 target: P.Oy
             }),
             key: "route",
             path: "/404"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: null !== P.Ql && void 0 !== P.Ql ? P.Ql : "https://blog.duolingo.com"
             }),
             key: "route",
             path: "/blog"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://careers.duolingo.com"
             }),
             key: "route",
             path: "/careers"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://design.duolingo.com/"
             }),
             key: "route",
             path: "/design"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://research.duolingo.com"
             }),
             key: "route",
             path: "/effectiveness-study"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://events.duolingo.com?source=main"
             }),
             key: "route",
             path: "/events"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://careers.duolingo.com"
             }),
             key: "route",
             path: "/jobs"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://press.duolingo.com"
             }),
             key: "route",
             path: "/press"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://research.duolingo.com"
             }),
             key: "route",
             path: "/research"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://schools.duolingo.com?source=main"
             }),
             key: "route",
             path: "/school"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://schools.duolingo.com?source=main"
             }),
             key: "route",
             path: "/schools"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://store.duolingo.com"
             }),
             key: "route",
             path: "/store"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: "https://careers.duolingo.com/#teams"
             }),
             key: "route",
             path: "/team"
         }), s.createElement(n.AW, {
-            element: s.createElement(Lr, {
+            element: s.createElement(Pr, {
                 target: `https://abc.duolingo.com${window.location.search}`
             }),
             key: "route",
             path: "/abc"
         })]
-          , Ar = (0,
-        Qe.ZP)(( () => Promise.all([a.e(4243), a.e(1002)]).then(a.bind(a, 59668))))
           , Dr = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5655), a.e(132)]).then(a.bind(a, 9834))))
+        Qe.ZP)(( () => Promise.all([a.e(4243), a.e(1002)]).then(a.bind(a, 59668))))
           , Or = (0,
-        Qe.ZP)(( () => a.e(1144).then(a.bind(a, 24328))))
+        Qe.ZP)(( () => Promise.all([a.e(5655), a.e(132)]).then(a.bind(a, 9834))))
           , Nr = (0,
-        Qe.ZP)(( () => a.e(4125).then(a.bind(a, 4258))))
+        Qe.ZP)(( () => a.e(1144).then(a.bind(a, 24328))))
           , xr = (0,
-        Qe.ZP)(( () => a.e(8707).then(a.bind(a, 60207))))
+        Qe.ZP)(( () => a.e(4125).then(a.bind(a, 4258))))
           , Mr = (0,
-        Qe.ZP)(( () => a.e(6734).then(a.bind(a, 89945))))
+        Qe.ZP)(( () => a.e(8707).then(a.bind(a, 60207))))
           , Fr = (0,
-        Qe.ZP)(( () => a.e(1190).then(a.bind(a, 58504))))
+        Qe.ZP)(( () => a.e(6734).then(a.bind(a, 89945))))
           , Ur = (0,
-        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2396)]).then(a.bind(a, 53755))))
+        Qe.ZP)(( () => a.e(1190).then(a.bind(a, 58504))))
           , Hr = (0,
-        Qe.ZP)(( () => a.e(7054).then(a.bind(a, 1668))))
+        Qe.ZP)(( () => Promise.all([a.e(5931), a.e(2396)]).then(a.bind(a, 53755))))
           , Gr = (0,
-        Qe.ZP)(( () => Promise.all([a.e(961), a.e(2988), a.e(639)]).then(a.bind(a, 25588))))
+        Qe.ZP)(( () => a.e(7054).then(a.bind(a, 1668))))
           , Vr = (0,
-        Qe.ZP)(( () => Promise.all([a.e(961), a.e(8222)]).then(a.bind(a, 97477))))
+        Qe.ZP)(( () => Promise.all([a.e(961), a.e(2988), a.e(639)]).then(a.bind(a, 25588))))
           , zr = (0,
+        Qe.ZP)(( () => Promise.all([a.e(961), a.e(8222)]).then(a.bind(a, 97477))))
+          , Br = (0,
         Qe.ZP)(( () => a.e(6679).then(a.bind(a, 59705))))
-          , Br = [s.createElement(n.AW, {
-            element: s.createElement(Mr, null),
+          , jr = [s.createElement(n.AW, {
+            element: s.createElement(Fr, null),
             key: "route",
             path: "/2022-campaigns"
         }), s.createElement(n.AW, {
-            element: s.createElement(Or, null),
+            element: s.createElement(Nr, null),
             key: "route",
             path: "/apk-download"
         }), s.createElement(n.AW, {
-            element: s.createElement(Dr, null),
+            element: s.createElement(Or, null),
             key: "route",
             path: "/business/checkout"
         }), s.createElement(n.AW, {
-            element: s.createElement(Ar, null),
+            element: s.createElement(Dr, null),
             key: "route",
             path: "/business"
         }), s.createElement(n.AW, {
-            element: s.createElement(Nr, null),
+            element: s.createElement(xr, null),
             key: "route",
             path: "/duoversary"
         }), s.createElement(n.AW, {
-            element: s.createElement(xr, null),
+            element: s.createElement(Mr, null),
             key: "route",
             path: "/efficacy/*"
         }), s.createElement(n.AW, {
-            element: s.createElement(Hr, null),
+            element: s.createElement(Gr, null),
             key: "route",
             path: "/share/sm"
         }), s.createElement(n.AW, {
-            element: s.createElement(Hr, null),
+            element: s.createElement(Gr, null),
             key: "route",
             path: "/share-direct/sm"
         }), s.createElement(n.AW, {
-            element: s.createElement(Fr, null),
+            element: s.createElement(Ur, null),
             key: "route",
             path: "/valyriansteel"
         }), s.createElement(n.AW, {
-            element: s.createElement(Ur, {
+            element: s.createElement(Hr, {
                 purchaseFlowType: "super"
             }),
             key: "route",
             path: "/ios-super-purchase-flow"
         }), s.createElement(n.AW, {
-            element: s.createElement(Ur, {
+            element: s.createElement(Hr, {
                 purchaseFlowType: "max"
             }),
             key: "route",
             path: "/ios-max-purchase-flow"
         }), s.createElement(n.AW, {
-            element: s.createElement(Gr, null),
+            element: s.createElement(Vr, null),
             key: "route",
             path: "/weekly-report"
         }), s.createElement(n.AW, {
-            element: s.createElement(Vr, null),
+            element: s.createElement(zr, null),
             key: "route",
             path: "/year-in-review/2023"
         }), s.createElement(n.AW, {
-            element: s.createElement(zr, null),
+            element: s.createElement(Br, null),
             key: "route",
             path: "/campaigns"
         })]
-          , jr = () => {
+          , $r = () => {
             var e;
             return null !== (e = (0,
             l.rV)(l.Qt.LastAppCrashes, {
                 useSessionStorage: !0
             })) && void 0 !== e ? e : []
         }
-          , $r = (0,
-        Qe.ZP)(( () => Promise.all([a.e(4265), a.e(7803)]).then(a.bind(a, 34251))))
           , Zr = (0,
-        Qe.ZP)(( () => a.e(6557).then(a.bind(a, 36557))))
+        Qe.ZP)(( () => Promise.all([a.e(4265), a.e(7803)]).then(a.bind(a, 34251))))
           , Wr = (0,
-        Qe.ZP)(( () => a.e(6710).then(a.bind(a, 56710))))
+        Qe.ZP)(( () => a.e(6557).then(a.bind(a, 36557))))
           , qr = (0,
+        Qe.ZP)(( () => a.e(6710).then(a.bind(a, 56710))))
+          , Qr = (0,
         Qe.ZP)(( () => a.e(7017).then(a.bind(a, 57017))))
-          , Qr = Vs("/", "/log-in", "/register_user")
-          , Kr = () => {
+          , Kr = Vs("/", "/log-in", "/register_user")
+          , Yr = () => {
             const e = (0,
             L.TH)()
               , t = ( () => {
@@ -14526,7 +14541,7 @@
                     if (!e)
                         return;
                     ( () => {
-                        const e = jr();
+                        const e = $r();
                         e.push(Date.now()),
                         (0,
                         l.LS)(l.Qt.LastAppCrashes, e.slice(-3), {
@@ -14543,7 +14558,7 @@
                     ;
                     if (( () => {
                         const e = Date.now() - 6e4;
-                        return 3 === jr().filter((t => t > e)).length
+                        return 3 === $r().filter((t => t > e)).length
                     }
                     )())
                         return (0,
@@ -14568,7 +14583,7 @@
             )()
               , i = (0,
             z.Pc)()
-              , u = s.useMemo(( () => (e => vr((e => [...e ? [{
+              , u = s.useMemo(( () => (e => fr((e => [...e ? [{
                 components: [ ({location: e}) => s.createElement(Gs, {
                     to: {
                         pathname: P.B6,
@@ -14586,40 +14601,40 @@
                         components: [Js],
                         path: P.B6
                     }, {
-                        components: [_r("shop"), Xs],
+                        components: [vr("shop"), Xs],
                         path: "/shop"
                     }]
                 }, {
                     components: [tr],
                     path: "/alphabets/:languageAbbrev/tips",
-                    props: yr
+                    props: Er
                 }, {
                     components: [er],
                     path: "/alphabets/:languageAbbrev/tips/:groupIndex/:tipIndex",
-                    props: yr
+                    props: Er
                 }, {
                     components: [er],
-                    props: Er,
+                    props: br,
                     subroutes: [{
                         path: "/alphabets/:languageAbbrev/:alphabetSessionId/group/:groupId/tips"
                     }, {
                         path: "/alphabets/:languageAbbrev/:alphabetSessionId/tips"
                     }]
                 }, {
-                    components: [_r("alphabet-lessons"), Xn],
+                    components: [vr("alphabet-lessons"), Xn],
                     path: "/characters"
                 }, {
-                    components: [_r("mistakes"), cn, on],
+                    components: [vr("mistakes"), cn, on],
                     path: "/practice-hub/mistakes"
                 }, {
-                    components: [_r("practice-hub"), cn, ln],
+                    components: [vr("practice-hub"), cn, ln],
                     path: "/practice-hub/stories"
                 }, {
-                    components: [_r("practice-hub"), cn, dn],
+                    components: [vr("practice-hub"), cn, dn],
                     path: P.$R
                 }, {
                     components: [an, en],
-                    props: Er,
+                    props: br,
                     subroutes: [{
                         path: "/alphabets/:languageAbbrev/:alphabetSessionId/group/:groupId"
                     }, {
@@ -14633,7 +14648,7 @@
                     }]
                 }, {
                     components: [nn, an, en],
-                    props: Er,
+                    props: br,
                     subroutes: [{
                         path: "/practice-hub/:practiceType"
                     }, {
@@ -14641,7 +14656,7 @@
                     }]
                 }, {
                     components: [js, tn],
-                    props: Er,
+                    props: br,
                     subroutes: [{
                         path: "/lesson"
                     }, {
@@ -14656,33 +14671,33 @@
                 }, {
                     components: [Qs],
                     path: "/guidebook/:languageAbbrev/:unitNumber",
-                    props: yr
+                    props: Er
                 }, {
                     components: [ur],
                     path: "/sections/details/:pathSectionNumber",
-                    props: yr
+                    props: Er
                 }, {
                     components: [Ks],
                     path: "/guidebook/preview/:fromLanguageAbbrev/:learningLanguageAbbrev/:unitNumber",
-                    props: yr
+                    props: Er
                 }, {
                     components: [nn, en],
                     path: "/mistakes-review",
-                    props: Er
+                    props: br
                 }, {
-                    components: [_r("practice-hub"), rn],
+                    components: [vr("practice-hub"), rn],
                     path: "/practice-hub"
                 }, {
                     components: [or, Kn],
                     path: "/settings/*",
-                    props: yr
+                    props: Er
                 }, {
                     components: [Sn],
                     path: "/admin_tools"
                 }, {
-                    components: [_r("profiles"), Zn],
+                    components: [vr("profiles"), Zn],
                     path: "/user-search",
-                    props: yr
+                    props: Er
                 }, {
                     components: [Wn],
                     path: "/friend-updates"
@@ -14692,18 +14707,18 @@
                 }, {
                     components: [gn],
                     path: "/welcome/:linkCode?",
-                    props: br
+                    props: Ir
                 }, {
-                    components: [_r("leaderboards"), un],
+                    components: [vr("leaderboards"), un],
                     path: "/leaderboard",
                     props: {
-                        noMobileTopbar: Sr
+                        noMobileTopbar: yr
                     }
                 }, {
-                    components: [_r("quests"), cr],
+                    components: [vr("quests"), cr],
                     path: "/quests",
                     props: {
-                        noMobileTopbar: Sr
+                        noMobileTopbar: yr
                     }
                 }, {
                     components: [dr],
@@ -14711,12 +14726,12 @@
                 }, {
                     components: [mr],
                     path: "/plushie/register/:code",
-                    props: Er
+                    props: br
                 }]
             }, {
                 components: [pr],
                 path: "/plushie",
-                props: Er
+                props: br
             }, {
                 components: [pn],
                 subroutes: [{
@@ -14738,12 +14753,12 @@
             }, {
                 components: [$s],
                 path: "/login-page",
-                props: br
+                props: Ir
             }, {
                 components: [Mn],
                 path: "/abc-privacy"
             }, {
-                components: [_r("courses"), En],
+                components: [vr("courses"), En],
                 path: "/courses/:fromLanguageId?"
             }, {
                 components: [Ws],
@@ -14754,18 +14769,18 @@
             }, {
                 components: [Un],
                 path: "/confirm/:tokenType/:token",
-                props: br
+                props: Ir
             }, {
                 components: [Hn],
                 path: "/confirm/error",
-                props: br
+                props: Ir
             }, {
                 components: [bn],
                 path: "/guidelines"
             }, {
                 components: [In],
                 path: "/help/*",
-                props: br
+                props: Ir
             }, {
                 components: [yn],
                 path: "/join-beta"
@@ -14778,19 +14793,19 @@
             }, ...P.a9.map((e => ({
                 components: [Tn],
                 path: e,
-                props: br
+                props: Ir
             }))), {
                 components: [Ln],
                 path: "/gift/checkout",
-                props: br
+                props: Ir
             }, {
                 components: [Rn],
                 path: "/gift",
-                props: br
+                props: Ir
             }, {
                 components: [Cn],
                 path: "/redeem",
-                props: br
+                props: Ir
             }, {
                 components: [qs],
                 path: "/reset_password/:client_abbrev?"
@@ -14798,7 +14813,7 @@
                 components: [Pn],
                 path: "/attribution",
                 props: {
-                    noMobileTabbar: fr
+                    noMobileTabbar: Sr
                 }
             }, {
                 components: [On],
@@ -14824,13 +14839,13 @@
             }, {
                 components: [sn, Jn],
                 path: "/stories/:storyId",
-                props: Er
+                props: br
             }, {
                 components: [gr],
                 path: "student-plan",
-                props: br
+                props: Ir
             }, {
-                components: [_r("profiles"), zn],
+                components: [vr("profiles"), zn],
                 path: "/profile/:username",
                 subroutes: [{
                     path: "/followers"
@@ -14838,27 +14853,27 @@
                     path: "/following"
                 }]
             }, {
-                components: [_r("profiles"), jn],
+                components: [vr("profiles"), jn],
                 path: "/profile/:username/achievements"
             }, {
-                components: [_r("profiles"), Qn],
+                components: [vr("profiles"), Qn],
                 path: "/profile/:username/friends-in-common"
             }, {
-                components: [_r("profiles"), Bn],
+                components: [vr("profiles"), Bn],
                 path: "/friend-suggestions"
             }, {
                 components: [$n],
                 path: "/profile/:username/courses"
             }, {
-                components: [_r("courses"), Zs],
+                components: [vr("courses"), Zs],
                 path: "/enroll/:learningLanguageId/:fromLanguageId?/:slug?"
             }, {
                 components: [ar],
                 path: "/family",
-                props: br
+                props: Ir
             }, {
                 components: [sr],
-                props: br,
+                props: Ir,
                 subroutes: [{
                     path: "/family-plan"
                 }, {
@@ -14868,7 +14883,7 @@
                 }]
             }, {
                 components: [nr],
-                props: br,
+                props: Ir,
                 subroutes: [{
                     path: "/classroom"
                 }, {
@@ -14877,31 +14892,37 @@
             }, {
                 components: [rr],
                 path: "/bango/:reseller/:token",
-                props: br
+                props: Ir
             }, {
                 components: [ir],
                 path: "/purchase",
-                props: br
+                props: Ir
             }, {
                 props: {
                     noMobileTopbar: e
                 },
                 subroutes: [{
-                    components: [_r("profiles"), Vn],
+                    components: [vr("profiles"), Vn],
                     path: "/profile/:username"
                 }, {
-                    components: [_r("profiles"), Vn],
+                    components: [vr("profiles"), Vn],
                     path: "/u/:userId"
                 }]
             }, {
                 components: [hr],
                 path: "/add-scores-to-linkedin",
-                props: br
+                props: Ir
+            }, {
+                components: [_r],
+                path: "/score-linkedin-landing",
+                props: {
+                    ...Ir
+                }
             }])(e)).map(( ({path: e, props: t, components: a=[]}) => {
                 if (void 0 === e)
                     throw Error("App route path cannot be undefined");
                 return s.createElement(n.AW, {
-                    element: s.createElement(Ir, {
+                    element: s.createElement(wr, {
                         appProps: null != t ? t : {},
                         components: a,
                         path: e
@@ -15149,7 +15170,7 @@
                     to: "/help"
                 }),
                 path: "/troubleshooting"
-            }), i ? Qr.filter((e => "/" !== e)).map((t => s.createElement(n.AW, {
+            }), i ? Kr.filter((e => "/" !== e)).map((t => s.createElement(n.AW, {
                 element: s.createElement(Gs, {
                     to: {
                         pathname: P.B6,
@@ -15166,7 +15187,7 @@
                     }
                 }),
                 path: P.B6
-            }), ...Pr, ...m, ...Br, ...Rr, (0,
+            }), ...Ar, ...m, ...jr, ...Lr, (0,
             w.Au)() ? s.createElement(n.AW, {
                 element: s.createElement(n.Fg, {
                     to: "/debug/components/controls/LottieAnimationLazy"
@@ -15174,21 +15195,21 @@
                 path: "/lottie"
             }) : null, (0,
             w.Au)() ? s.createElement(n.AW, {
-                element: s.createElement($r, null),
+                element: s.createElement(Zr, null),
                 path: "/archSample"
             }) : null, (0,
             w.Au)() ? s.createElement(n.AW, {
-                element: s.createElement(Zr, null),
+                element: s.createElement(Wr, null),
                 path: "/debug/*"
             }) : null, (e => e ? Vs("/p", "/feed") : Vs("/p", "/leaderboard", "/feed"))(i).map((e => s.createElement(n.AW, {
-                element: s.createElement(Wr, null),
+                element: s.createElement(qr, null),
                 key: "route",
                 path: e
             }))), s.createElement(n.AW, {
                 element: s.createElement(zs, null, s.createElement(ks, null)),
                 path: "/course/:learningLanguageId/:fromLanguageId?/:slug?"
             }), s.createElement(n.AW, {
-                element: s.createElement(qr, null),
+                element: s.createElement(Qr, null),
                 path: "/logout"
             }), s.createElement(n.AW, {
                 element: s.createElement(Fs, null),
@@ -15196,7 +15217,7 @@
             }), s.createElement(n.AW, {
                 element: s.createElement(Fs, null),
                 path: "/register/:languageId?"
-            }), ...u, Qr.map((e => s.createElement(n.AW, {
+            }), ...u, Kr.map((e => s.createElement(n.AW, {
                 element: s.createElement(Is, null),
                 key: "route",
                 path: e
@@ -31136,7 +31157,6 @@
             e.LeaveClassroomConfirmation = "LEAVE_CLASSROOM_CONFIRMATION",
             e.LegendaryPurchase = "LEGENDARY_PURCHASE",
             e.LegendarySplash = "LEGENDARY_SPLASH",
-            e.LinkedInRemoveScore = "LINKEDIN_REMOVE_SCORE",
             e.MessageUser = "MESSAGE_USER",
             e.MonthlyBadges = "MONTHLY_BADGES",
             e.MonthlyChallengeIntro = "MONTHLY_CHALLENGE_INTRO",
@@ -31230,7 +31250,7 @@
             streakFreezeUsed: "STREAK_FREEZE_USED"
         }
           , o = (0,
-        s.p)(["AVATARS_INTRODUCTION", "AVATARS_SAVE_CONFIRM", "CONFIRM", "CONFIRM_SKIP_ALPHABET_GATE", "EASIER_LESSON_NUDGE", "FRIENDS_QUEST_GIFT", "GENERIC_NOTIFICATION", "LEGENDARY_WITH_GEMS", "PRACTICE_HUB_SESSION_NOTIFICATION", "REACTIONS", "SEND_NUDGE", "STREAK_EARNBACK", "STREAK_PANEL_EXPANDED", "SUPER_OFFBOARDING", "dogfoodingPreview", "dynamic", "emailVerified", "friendsStreakLoss", "friendsStreakOffer", "immersivePlusPromo", "legendaryRebrandGoldColor", "kudosOffer", "kudosReceive", "maintenanceBreak", "marketingOptIn", "mobileWebToAppConversion", "mobileWebToAppConversionAggressive", "newYearsDiscount", "pathChange", "shakeToReportAlert", "schoolsJoinedClassroom", "skillTreeMigration", "streakFreezeRecurringOffer", "streakFreezeUsed", "streakRepairOffer", "superFamilyPlanInvite", "turningNotificationsOn", "webToAppConversion", "webToAppConversionAggressive"])
+        s.p)(["AVATARS_INTRODUCTION", "AVATARS_SAVE_CONFIRM", "CONFIRM", "CONFIRM_SKIP_ALPHABET_GATE", "EASIER_LESSON_NUDGE", "FRIENDS_QUEST_GIFT", "GENERIC_NOTIFICATION", "LEGENDARY_WITH_GEMS", "LINKEDIN_REMOVE_SCORE", "PRACTICE_HUB_SESSION_NOTIFICATION", "REACTIONS", "SEND_NUDGE", "STREAK_EARNBACK", "STREAK_PANEL_EXPANDED", "SUPER_OFFBOARDING", "dogfoodingPreview", "dynamic", "emailVerified", "friendsStreakLoss", "friendsStreakOffer", "immersivePlusPromo", "legendaryRebrandGoldColor", "kudosOffer", "kudosReceive", "maintenanceBreak", "marketingOptIn", "mobileWebToAppConversion", "mobileWebToAppConversionAggressive", "newYearsDiscount", "pathChange", "shakeToReportAlert", "schoolsJoinedClassroom", "skillTreeMigration", "streakFreezeRecurringOffer", "streakFreezeUsed", "streakRepairOffer", "superFamilyPlanInvite", "turningNotificationsOn", "webToAppConversion", "webToAppConversionAggressive"])
           , l = (0,
         s.p)(["friendsStreakLoss", "friendsStreakOffer", "kudosOffer", "kudosReceive", "legendaryRebrandGoldColor", "marketingOptIn", "pathChange", "streakFreezeRecurringOffer", "streakFreezeUsed", "streakRepairOffer", "turningNotificationsOn", "webToAppConversion", "webToAppConversionAggressive", "newYearsDiscount", "superFamilyPlanInvite"])
           , c = (0,
@@ -31269,7 +31289,7 @@
     18201: (e, t, a) => {
         "use strict";
         a.d(t, {
-            Z: () => $
+            Z: () => Z
         });
         var s = a(68903)
           , n = a(1398)
@@ -31317,52 +31337,54 @@
         n.ZP)(( () => Promise.all([a.e(5931), a.e(4048), a.e(3980)]).then(a.bind(a, 962))))
           , E = i(( () => a.e(4800).then(a.bind(a, 71347))))
           , b = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(8405)]).then(a.bind(a, 51526))))
+        n.ZP)(( () => a.e(2669).then(a.bind(a, 30429))))
           , I = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(9006)]).then(a.bind(a, 88964))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(8405)]).then(a.bind(a, 51526))))
           , w = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(3207)]).then(a.bind(a, 91295))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(9006)]).then(a.bind(a, 88964))))
           , k = (0,
-        n.ZP)(( () => a.e(5472).then(a.bind(a, 65472))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(3207)]).then(a.bind(a, 91295))))
           , T = (0,
-        n.ZP)(( () => a.e(7810).then(a.bind(a, 17810))))
+        n.ZP)(( () => a.e(5472).then(a.bind(a, 65472))))
           , C = (0,
-        n.ZP)(( () => Promise.all([a.e(6935), a.e(1743)]).then(a.bind(a, 97091))))
+        n.ZP)(( () => a.e(7810).then(a.bind(a, 17810))))
           , R = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(2513)]).then(a.bind(a, 48497))))
+        n.ZP)(( () => Promise.all([a.e(6935), a.e(1743)]).then(a.bind(a, 97091))))
           , L = (0,
-        n.ZP)(( () => a.e(3304).then(a.bind(a, 49346))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(2513)]).then(a.bind(a, 48497))))
           , P = (0,
-        n.ZP)(( () => a.e(394).then(a.bind(a, 40394))))
+        n.ZP)(( () => a.e(3304).then(a.bind(a, 49346))))
           , A = (0,
-        n.ZP)(( () => Promise.all([a.e(6935), a.e(6126)]).then(a.bind(a, 32708))))
+        n.ZP)(( () => a.e(394).then(a.bind(a, 40394))))
           , D = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(1686)]).then(a.bind(a, 17709))))
+        n.ZP)(( () => Promise.all([a.e(6935), a.e(6126)]).then(a.bind(a, 32708))))
           , O = (0,
-        n.ZP)(( () => a.e(9479).then(a.bind(a, 67087))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(1686)]).then(a.bind(a, 17709))))
           , N = (0,
-        n.ZP)(( () => a.e(9522).then(a.bind(a, 59522))))
+        n.ZP)(( () => a.e(9479).then(a.bind(a, 67087))))
           , x = (0,
-        n.ZP)(( () => a.e(6958).then(a.bind(a, 68820))))
+        n.ZP)(( () => a.e(9522).then(a.bind(a, 59522))))
           , M = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(7200)]).then(a.bind(a, 92463))))
+        n.ZP)(( () => a.e(6958).then(a.bind(a, 68820))))
           , F = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(7631)]).then(a.bind(a, 39555))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(7200)]).then(a.bind(a, 92463))))
           , U = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(5571)]).then(a.bind(a, 22095))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(7631)]).then(a.bind(a, 39555))))
           , H = (0,
-        n.ZP)(( () => Promise.all([a.e(5747), a.e(1024)]).then(a.bind(a, 77792))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(5571)]).then(a.bind(a, 22095))))
           , G = (0,
-        n.ZP)(( () => a.e(4077).then(a.bind(a, 44993))))
+        n.ZP)(( () => Promise.all([a.e(5747), a.e(1024)]).then(a.bind(a, 77792))))
           , V = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(2479)]).then(a.bind(a, 95414))))
+        n.ZP)(( () => a.e(4077).then(a.bind(a, 44993))))
           , z = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(5944)]).then(a.bind(a, 62379))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(2479)]).then(a.bind(a, 95414))))
           , B = (0,
-        n.ZP)(( () => Promise.all([a.e(1475), a.e(8123)]).then(a.bind(a, 96867))))
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(5944)]).then(a.bind(a, 62379))))
           , j = (0,
+        n.ZP)(( () => Promise.all([a.e(1475), a.e(8123)]).then(a.bind(a, 96867))))
+          , $ = (0,
         n.ZP)(( () => a.e(4420).then(a.bind(a, 86480))))
-          , $ = e => {
+          , Z = e => {
             switch (e) {
             case "AVATARS_INTRODUCTION":
                 return o;
@@ -31380,18 +31402,20 @@
                 return S(e);
             case "LEGENDARY_WITH_GEMS":
                 return E(e);
+            case "LINKEDIN_REMOVE_SCORE":
+                return b;
             case "PRACTICE_HUB_SESSION_NOTIFICATION":
-                return L;
-            case "REACTIONS":
                 return P;
+            case "REACTIONS":
+                return A;
             case "SEND_NUDGE":
-                return N;
-            case "STREAK_EARNBACK":
                 return x;
+            case "STREAK_EARNBACK":
+                return M;
             case "STREAK_PANEL_EXPANDED":
-                return H;
-            case "SUPER_OFFBOARDING":
                 return G;
+            case "SUPER_OFFBOARDING":
+                return V;
             case "charactersTabCallout":
                 return;
             case "dogfoodingPreview":
@@ -31410,23 +31434,23 @@
                 return y;
             case "kudosOffer":
             case "kudosReceive":
-                return V;
+                return z;
             case "leaderboardsIntro":
                 return;
             case "legendaryRebrandGoldColor":
-                return I;
-            case "maintenanceBreak":
-                return j;
-            case "marketingOptIn":
                 return w;
-            case "mobileWebToAppConversion":
+            case "maintenanceBreak":
+                return $;
+            case "marketingOptIn":
                 return k;
-            case "mobileWebToAppConversionAggressive":
+            case "mobileWebToAppConversion":
                 return T;
+            case "mobileWebToAppConversionAggressive":
+                return C;
             case "newYearsDiscount":
-                return R;
+                return L;
             case "pathChange":
-                return b;
+                return I;
             case "pathMigration":
             case "pathSectionsCallout":
             case "pathSkipping":
@@ -31435,27 +31459,27 @@
             case "plusBadgeMigration":
                 return;
             case "schoolsJoinedClassroom":
-                return O;
+                return N;
             case "shakeToReportAlert":
-                return A;
+                return D;
             case "skillTreeMigration":
-                return C;
+                return R;
             case "streakFreezeRecurringOffer":
-                return M;
-            case "streakFreezeUsed":
                 return F;
-            case "streakRepairOffer":
+            case "streakFreezeUsed":
                 return U;
+            case "streakRepairOffer":
+                return H;
             case "superFamilyPlanInvite":
                 return h;
             case "superPreviewEndingCallout":
                 return;
             case "turningNotificationsOn":
-                return D;
+                return O;
             case "webToAppConversion":
-                return B;
+                return j;
             case "webToAppConversionAggressive":
-                return z;
+                return B;
             case void 0:
                 return;
             default:
@@ -41383,12 +41407,12 @@
             "./sampleChallengesCharacterWrite.json": [92485, 5770],
             "./sampleChallengesJapanese.json": [89437, 407, 3860, 5905],
             "./sampleChallengesKorean.json": [66265, 407, 7493, 3860, 1012, 7764],
-            "./sampleChallengesPuzzleArabic.json": [18451, 5931, 2209, 7581, 5314, 5410, 5148, 4249, 12, 4048, 6628, 2980, 2039, 5644, 7981, 9031, 2100, 8238, 7208, 3869],
-            "./sampleChallengesPuzzleKorean.json": [56158, 2039, 7981, 4099],
-            "./sampleChallengesSpanish.json": [90337, 7253],
-            "./sampleChallengesSpeak.json": [19872, 2039, 9031, 5123],
-            "./sampleChallengesSvgPuzzle.json": [42870, 7581, 3746],
-            "./sampleChallengesTrace.json": [54731, 5931, 2209, 7581, 5314, 5410, 5148, 4249, 12, 4048, 6628, 2980, 2039, 5644, 7981, 9031, 2100, 8238, 7208, 9481]
+            "./sampleChallengesPuzzleArabic.json": [18451, 3869],
+            "./sampleChallengesPuzzleKorean.json": [56158, 5931, 7581, 5314, 2298, 5410, 5425, 4249, 12, 4048, 6628, 2980, 2039, 5644, 7122, 7981, 9031, 5197, 8238, 5380, 4099],
+            "./sampleChallengesSpanish.json": [90337, 2039, 7981, 7253],
+            "./sampleChallengesSpeak.json": [19872, 5123],
+            "./sampleChallengesSvgPuzzle.json": [42870, 2039, 9031, 3746],
+            "./sampleChallengesTrace.json": [54731, 7581, 9481]
         };
         function n(e) {
             if (!a.o(s, e))
