@@ -1,1 +1,0 @@
-document.write("Please update the Duolingo Unlimited Hearts extension: <a href='https://github.com/apersongithub/Duolingo-Unlimited-Hearts' target='_blank'>https://github.com/apersongithub/Duolingo-Unlimited-Hearts</a>");
